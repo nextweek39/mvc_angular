@@ -1,0 +1,19 @@
+﻿<div class="container">
+    <form [ngFormModel]="addUser" class="col-md-4">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text"
+                   ngControl="name"
+                   #name="ngForm"
+                   class="form-control"
+                   id="name"
+                   placeholder="Name"
+                   required />
+            <div *ngIf="name.touched && name.errors">
+                <div>
+                    Name is required
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
